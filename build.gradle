@@ -1,0 +1,10 @@
+defaultTasks 'frontend:clean',
+        'frontend:yarn',
+        'frontend:yarn_run_build-test',
+        'frontend:webjar',
+        'backend:clean',
+        'backend:build'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4'
+}
