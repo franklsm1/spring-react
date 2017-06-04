@@ -22,3 +22,7 @@ clean {
     delete 'dist'
     delete 'build'
 }
+
+clean.doLast {
+    file('src/header/__snapshots__').deleteDir()
+}

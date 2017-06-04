@@ -2,7 +2,7 @@
 
 __Install [Yarn](https://yarnpkg.com/en/)(a better npm):__
 
-1. Run `npm install -g yarn` to install Yarn
+1. Run `npm install -g yarn` to install Yarn globally
 
 __Setup project:__
 
@@ -17,7 +17,5 @@ __Run front-end for development__
 
 __Build and run full stack__
 
-1. Run `./gradlew` to build project
-2. `cd backend/build/libs/`
-3. Run `java -jar spring-react-0.0.1.jar`
-4. Navigate to localhost:8080
+1. Run `./gradlew` or just `gradle` if installed to build, run all tests, and start the app
+2. Navigate to localhost:8080
