@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 class SimpleController {
-    @GetMapping("/testInitialState")
+    @GetMapping("/test")
     public InitialState getInitialCountRequest() {
         InitialState state = new InitialState();
         state.setText("Spring-React is wired up!");

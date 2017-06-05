@@ -1,5 +1,3 @@
-import React from 'react'
-
 const mapStateToProps = (state) => ({
     text: state.app.text,
     showLogo: state.app.showLogo,

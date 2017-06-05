@@ -26,7 +26,7 @@ public class SimpleControllerTest {
     @Test
     public void tryInitialCountEndpoint() throws Exception {
 
-        MockHttpServletRequestBuilder request = get("/testInitialState")
+        MockHttpServletRequestBuilder request = get("/test")
                 .contentType(MediaType.APPLICATION_JSON);
 
         this.mockMvc.perform(request)
