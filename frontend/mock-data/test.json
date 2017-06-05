@@ -1,5 +1,6 @@
 {
   "test": {
-    "text": "Spring-react mock server data!"
+    "text": "Spring-react mock server data!",
+    "value": 77
   }
 }

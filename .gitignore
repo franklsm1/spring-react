@@ -27,5 +27,4 @@ nbdist/
 
 ### Node.js ###
 node_modules
-__snapshots__
 yarn-error.log

@@ -1,8 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {createStore} from 'redux'
-import {Provider} from 'react-redux'
-import App from './containers/App';
+import {Provider, connect} from 'react-redux'
+import {mapStateToProps, mapDispatchToProps} from './Setup';
+import App from './containers/App'
 import reducer from './reducers'
 import './index.css';
 
@@ -17,15 +18,20 @@ fetch('/testInitialState', options).then(response => response.json())
     .then(initialState => {
         const store = createStore(reducer, {
             app: {
-                value: initialState.value,
-                text: initialState.text,
+                value: initialState.value || 0,
+                text: initialState.text || "Backend didn't give me anything",
                 showLogo: true
             }
         });
 
+        const ConnectedApp = connect(
+            mapStateToProps,
+            mapDispatchToProps
+        )(App);
+
         render(
             <Provider store={store}>
-                <App />
+                <ConnectedApp />
             </Provider>,
             document.getElementById('root')
         );
