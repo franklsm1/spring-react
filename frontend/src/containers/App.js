@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getText } from './AppService';
-import Header from './header/Header';
+import Header from '../header/Header';
+import Home from './Home';
 
 class App extends Component {
 
@@ -27,6 +28,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header text={this.state.text}/>
+                <Home />
             </div>
         );
     }
