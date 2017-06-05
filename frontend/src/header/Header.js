@@ -1,44 +1,32 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component} from 'react'
+// import PropTypes from 'prop-types'
 import logo from './compozed.jpg';
 import './header.css';
 
-class Header extends Component {
-
-    state = {
-        showLogo: Boolean
-    };
-
-    constructor() {
-        super();
-        this.state = {
-            showLogo: true,
-        }
+function createLogo(showLogo) {
+    let logoElement;
+    if (showLogo) {
+        logoElement = <img src={logo} className="Header-logo" alt=""/>;
     }
+    return logoElement;
+}
 
-    toggleLogo() {
-        this.setState({
-            showLogo: !this.state.showLogo
-        })
-    }
-
+export default class Header extends Component{
     render() {
-        let logoElement;
-        if (this.state.showLogo) {
-            logoElement = <img src={logo} className="Header-logo" alt="" />;
-        }
+        const {showLogo, text, onToggleLogo} = this.props;
 
         return (
             <div className="Header">
-                {logoElement}
-                <h2>{this.props.text}</h2>
-                <button onClick={() => this.toggleLogo()}>Toggle Logo</button>
+                {createLogo(showLogo)}
+                <h2>{text}</h2>
+                <button onClick={onToggleLogo}>Toggle Logo</button>
             </div>
         );
     }
 }
 
-Header.propTypes = {
-    text: PropTypes.string.isRequired,
-};
-
-export default Header;
+// Header.propTypes = {
+//     text: PropTypes.string.isRequired,
+//     showLogo: PropTypes.bool.isRequired,
+//     onToggleLogo: PropTypes.func.isRequired
+// };
