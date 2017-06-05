@@ -6,6 +6,7 @@ defaultTasks 'frontend:clean',
         'backend:build',
         'bootRun'
 
+
 task wrapper(type: Wrapper) {
     gradleVersion = '3.4'
 }
