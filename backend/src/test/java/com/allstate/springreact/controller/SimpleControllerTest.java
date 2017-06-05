@@ -24,17 +24,6 @@ public class SimpleControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void tryTestEndpoint() throws Exception {
-
-        MockHttpServletRequestBuilder request = get("/test")
-                .contentType(MediaType.APPLICATION_JSON);
-
-        this.mockMvc.perform(request)
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.text").value(equalTo("Spring-React is wired up!")));
-    }
-
-    @Test
     public void tryInitialCountEndpoint() throws Exception {
 
         MockHttpServletRequestBuilder request = get("/testInitialState")

@@ -1,13 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 class Counter extends Component {
-  static propTypes = {
-    value: PropTypes.number.isRequired,
-    onIncrement: PropTypes.func.isRequired,
-    onDecrement: PropTypes.func.isRequired
-  };
-
   incrementIfOdd = () => {
     if (this.props.value % 2 !== 0) {
       this.props.onIncrement()

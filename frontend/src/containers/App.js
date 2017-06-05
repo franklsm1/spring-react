@@ -1,37 +1,23 @@
 import React, { Component } from 'react';
-import { getText } from './AppService';
-import Header from '../header/HeaderSetup';
-import Body from './Body';
+import Header from '../components/Header';
+import Body from '../components/Body';
 
-class App extends Component {
-
-    // state = {
-    //     text: String
-    // };
-    //
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //         text: ''
-    //     };
-    // }
-    //
-    // componentDidMount() {
-    //     getText().then(response => {
-    //         this.setState({
-    //             text: response.text
-    //         });
-    //     });
-    // }
-
+export default class App extends Component {
     render() {
+        const {showLogo, text, onToggleLogo, value, onIncrement, onDecrement} = this.props;
         return (
             <div className="App">
-                <Header />
-                <Body />
+                <Header
+                    showLogo={showLogo}
+                    text={text}
+                    onToggleLogo={onToggleLogo}
+                />
+                <Body
+                    value={value}
+                    onIncrement={onIncrement}
+                    onDecrement={onDecrement}
+                />
             </div>
         );
     }
 }
-
-export default App;
