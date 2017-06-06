@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Body from '../components/Body';
-import Topics from '../components/Topics';
+import Topics from '../views/Topics';
+import Home from '../views/Home';
+import About from '../views/About';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,30 +10,6 @@ import {
 import './App.css';
 
 export default class App extends Component {
-
-    constructor(props){
-      super(props);
-      this.Home = this.Home.bind(this);
-    }
-
-    Home() {
-      const {showLogo, text, onToggleLogo, value, onIncrement, onDecrement} = this.props;
-      return (
-        <div>
-          <Header showLogo={showLogo} text={text} onToggleLogo={onToggleLogo}/>
-          <Body value={value} onIncrement={onIncrement} onDecrement={onDecrement}/>
-        </div>
-      );
-    }
-
-    About() {
-      return (
-        <div>
-          <h2>Example React App using redux and react router</h2>
-        </div>
-      );
-    }
-
     render() {
         return (
           <Router className="App">
@@ -45,8 +21,8 @@ export default class App extends Component {
                   </ul>
                   <hr/>
                   <div>
-                      <Route exact path="/" component={this.Home}/>
-                      <Route path="/about" component={this.About}/>
+                      <Route exact path="/" render={() => Home(this.props)}/>
+                      <Route path="/about" component={About}/>
                       <Route path="/topics" component={Topics}/>
                   </div>
               </div>

@@ -7,7 +7,7 @@ describe('reducers', () => {
         });
 
         it('should handle DECREMENT action', () => {
-          expect(counter({app: {value: 1}}, { type: 'DECREMENT' }).app.value).toBe(0)
+          expect(counter({app: {value: 10}}, { type: 'DECREMENT' }).app.value).toBe(9)
         });
 
         it('should ignore unknown actions', () => {

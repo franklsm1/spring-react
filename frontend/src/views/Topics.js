@@ -28,7 +28,6 @@ export default function({ match }) {
                   </Link>
               </li>
             </ul>
-
             <Route
                 path={`${match.url}/:topicId`}
                 component={Topic}

@@ -1,4 +1,4 @@
-### Spring-react Example App
+### Example App with a Spring backend and a React frontend using redux and react-router v4
 
 __Install [Yarn](https://yarnpkg.com/en/)(a better npm):__
 
@@ -19,3 +19,6 @@ __Build and run full stack__
 
 1. Run `./gradlew` or just `gradle` if installed to build, run all tests, and start the app
 2. Navigate to localhost:8080
+
+__Helpful Links__
+- [Link](https://reacttraining.com/react-router/web/example/basic) to react-router example used
