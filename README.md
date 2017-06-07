@@ -2,7 +2,7 @@
 
 __Install [Yarn](https://yarnpkg.com/en/)(a better npm):__
 
-1. Run `npm install -g yarn` to install Yarn globally
+1. Run `npm install -g yarn` to install Yarn globally if not done already
 
 __Setup project:__
 
@@ -12,7 +12,7 @@ __Setup project:__
 __Run front-end for development__
 
 1. `cd frontend`
-2. Run `yarn run start` to startup the front-end with a mock back-end using json-server
+2. Run `yarn start` to startup the front-end with a mock back-end using `json-server`
 3. Navigate to localhost:3000
 
 __Build and run full stack__
