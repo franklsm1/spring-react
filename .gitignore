@@ -1,6 +1,7 @@
 .gradle
 build
 classes
+out/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###

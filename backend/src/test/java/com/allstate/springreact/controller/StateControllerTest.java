@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class SimpleControllerTest {
+public class StateControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -26,7 +26,7 @@ public class SimpleControllerTest {
     @Test
     public void tryInitialCountEndpoint() throws Exception {
 
-        MockHttpServletRequestBuilder request = get("/test")
+        MockHttpServletRequestBuilder request = get("/state")
                 .contentType(MediaType.APPLICATION_JSON);
 
         this.mockMvc.perform(request)

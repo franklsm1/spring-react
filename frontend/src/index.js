@@ -14,7 +14,7 @@ const options = {
     }
 };
 
-fetch('/test', options).then(response => response.json())
+fetch('/state', options).then(response => response.json())
     .then(initialState => {
         const store = createStore(reducer, {
             app: {

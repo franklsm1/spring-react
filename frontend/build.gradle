@@ -17,8 +17,3 @@ task webjar(type: Jar, dependsOn: 'jar') {
         into 'META-INF/resources'
     }
 }
-
-clean {
-    delete 'dist'
-    delete 'build'
-}

@@ -1,7 +1,6 @@
 {
   "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
@@ -20,10 +19,11 @@
   },
   "scripts": {
     "start": "concurrently --kill-others 'react-scripts start' 'json-server -w -p 3001 mock-data/test.json'",
+    "test-start": "yarn && yarn test && yarn start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "build-test": "yarn run build && CI=true react-scripts test --env=jsdom"
+    "test": "CI=true react-scripts test --env=jsdom",
+    "test-build-jar": "yarn && CI=true react-scripts test --env=jsdom && react-scripts build && gradle webjar",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

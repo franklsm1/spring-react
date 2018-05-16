@@ -1,11 +1,15 @@
-defaultTasks 'frontend:clean',
-        'frontend:yarn',
-        'frontend:yarn_run_build-test',
-        'frontend:webjar',
+defaultTasks 'buildFrontend',
         'backend:clean',
-        'backend:build',
-        'bootRun'
+        'backend:build'
+
+task buildFrontend {
+    dependsOn 'frontend:yarn_test-build-jar'
+}
+
+task startFrontend {
+    dependsOn 'frontend:yarn_test-start'
+}
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.4'
+    gradleVersion = '4.6'
 }
