@@ -30,6 +30,10 @@ dependencies {
     compile("io.springfox:springfox-swagger2:" + SPRINGFOX_VERSION)
     compile("io.springfox:springfox-swagger-ui:" + SPRINGFOX_VERSION)
 
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile("io.micrometer:micrometer-spring-legacy:latest.release")
+    compile("io.micrometer:micrometer-registry-prometheus:1.0.4")
+
     compileOnly('org.projectlombok:lombok')
 
     runtimeOnly name: 'frontend'

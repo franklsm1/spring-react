@@ -1,2 +1,19 @@
+spring.application.name: spring-react
+
 server:
     port: ${PORT:8080}
+
+# Enable the /prometheus endpoint to be publicly accessible
+endpoints:
+    prometheus: 
+        sensitive: false
+
+management.metrics:
+  distribution:
+    # Enable publishing of histogram metrics to allow for computing aggregable percentile approximations
+    percentiles-histogram[http.server.requests]: true
+    # Publish the median and 95th percentile values
+    percentiles[http.server.requests]: 0.5, 0.95
+  tags:
+    # Add a custom label to each metric name to differentiate from other services
+    application: ${spring.application.name}
